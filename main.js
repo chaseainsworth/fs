@@ -34,7 +34,7 @@ fs.readFile('randomText.txt', 'utf8', (err, info) => {
     })
 }) 
 
-setTimeout(() => fs.rmdir('/Users/DevOps/Documents/code-immersives/term-2/week5/fs/content', (err) => {
+setTimeout(() => fs.rmdir('/Users/DevOps/Documents/code-immersives/term-2/week5/fs/content', { recursive: true }, (err) => {
     if (err) throw err;
     console.log('Content directory removed');
 }), 5000)
